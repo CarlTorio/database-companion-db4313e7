@@ -31,7 +31,7 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <motion.a href="#" className="flex items-center ml-8 md:ml-16" whileHover={{
+            <motion.a href="#" className="flex items-center ml-12 md:ml-24" whileHover={{
             scale: 1.02
           }}>
               <img src="https://i.imgur.com/9beP2dq.png" alt="SkinStation Logo" className="h-8 w-auto" />
@@ -49,7 +49,7 @@ const Header = () => {
                 </li>)}
             </ul>
 
-            <div className="hidden md:flex items-center gap-4 mr-8 md:mr-16">
+            <div className="hidden md:flex items-center gap-4 mr-12 md:mr-24">
               <Button className="gradient-accent text-accent-foreground hover:opacity-90 transition-opacity">
                 Join Now
               </Button>
