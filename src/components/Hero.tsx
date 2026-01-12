@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent z-10" />
         <img
-          src="https://i.imgur.com/ftX8zqh.png"
+          src="https://i.imgur.com/Ehl3eHG.png"
           alt="Beautiful women with radiant skin"
           className="w-full h-full object-cover object-center"
         />
