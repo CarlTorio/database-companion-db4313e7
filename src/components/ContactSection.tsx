@@ -7,70 +7,70 @@ const ContactSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="py-10 md:py-14 bg-cream" ref={ref} id="contact">
+    <section className="py-6 md:py-8 bg-cream" ref={ref} id="contact">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-8 md:mb-12"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-4 md:mb-6"
         >
-          <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-semibold text-foreground mb-2 md:mb-3">
+          <h2 className="font-display text-lg md:text-xl lg:text-2xl font-semibold text-foreground mb-1 md:mb-2">
             Get In Touch
           </h2>
-          <p className="text-muted-foreground text-xs md:text-sm lg:text-base max-w-xl mx-auto px-2">
-            Visit us or reach out through any of our channels. We'd love to hear from you!
+          <p className="text-muted-foreground text-[10px] md:text-xs lg:text-sm max-w-md mx-auto px-2">
+            Visit us or reach out through any of our channels.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5">
           {/* Contact Info & Social Media */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-3"
           >
             {/* Contact Details */}
-            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 shadow-soft">
-              <h3 className="font-display text-base md:text-lg font-semibold text-foreground mb-4">
+            <div className="bg-card rounded-lg md:rounded-xl p-3 md:p-4 shadow-soft">
+              <h3 className="font-display text-sm md:text-base font-semibold text-foreground mb-2">
                 Contact Information
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <a 
                   href="tel:09773344200" 
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
                 >
-                  <div className="w-10 h-10 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Phone className="w-4 h-4 text-accent-foreground" />
+                  <div className="w-7 h-7 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Phone className="w-3 h-3 text-accent-foreground" />
                   </div>
-                  <span className="text-sm md:text-base">0977 334 4200</span>
+                  <span className="text-xs md:text-sm">0977 334 4200</span>
                 </a>
                 <a 
                   href="mailto:cruzskin@gmail.com" 
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
                 >
-                  <div className="w-10 h-10 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Mail className="w-4 h-4 text-accent-foreground" />
+                  <div className="w-7 h-7 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Mail className="w-3 h-3 text-accent-foreground" />
                   </div>
-                  <span className="text-sm md:text-base">cruzskin@gmail.com</span>
+                  <span className="text-xs md:text-sm">cruzskin@gmail.com</span>
                 </a>
                 <a 
                   href="https://maps.app.goo.gl/8cncKgXznqJqrz4UA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors group"
+                  className="flex items-start gap-2 text-muted-foreground hover:text-foreground transition-colors group"
                 >
-                  <div className="w-10 h-10 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <MapPin className="w-4 h-4 text-accent-foreground" />
+                  <div className="w-7 h-7 gradient-accent rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <MapPin className="w-3 h-3 text-accent-foreground" />
                   </div>
-                  <span className="text-sm md:text-base">6014 Mandaue City, Philippines</span>
+                  <span className="text-xs md:text-sm">6014 Mandaue City, Philippines</span>
                 </a>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <div className="w-10 h-10 gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-4 h-4 text-accent-foreground" />
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <div className="w-7 h-7 gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-3 h-3 text-accent-foreground" />
                   </div>
-                  <div className="text-sm md:text-base">
+                  <div className="text-xs md:text-sm">
                     <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
                     <p>Sunday: 10:00 AM - 5:00 PM</p>
                   </div>
@@ -79,29 +79,29 @@ const ContactSection = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-card rounded-xl md:rounded-2xl p-5 md:p-6 shadow-soft">
-              <h3 className="font-display text-base md:text-lg font-semibold text-foreground mb-4">
+            <div className="bg-card rounded-lg md:rounded-xl p-3 md:p-4 shadow-soft">
+              <h3 className="font-display text-sm md:text-base font-semibold text-foreground mb-2">
                 Follow Us
               </h3>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a
                   href="https://www.facebook.com/profile.php?id=61580172268741"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 gradient-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-9 h-9 gradient-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <Facebook className="w-5 h-5 text-accent-foreground" />
+                  <Facebook className="w-4 h-4 text-accent-foreground" />
                 </a>
                 <a
                   href="https://instagram.com/hilome"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 gradient-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  className="w-9 h-9 gradient-accent rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <Instagram className="w-5 h-5 text-accent-foreground" />
+                  <Instagram className="w-4 h-4 text-accent-foreground" />
                 </a>
               </div>
-              <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <div className="mt-2 flex flex-wrap gap-2 text-xs">
                 <a
                   href="https://www.facebook.com/profile.php?id=61580172268741"
                   target="_blank"
@@ -125,10 +125,10 @@ const ContactSection = () => {
 
           {/* Google Map */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="h-[300px] md:h-full min-h-[400px] rounded-xl md:rounded-2xl overflow-hidden shadow-soft relative group"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="h-[200px] md:h-full min-h-[250px] rounded-lg md:rounded-xl overflow-hidden shadow-soft relative group"
           >
             <a
               href="https://maps.app.goo.gl/8cncKgXznqJqrz4UA"
