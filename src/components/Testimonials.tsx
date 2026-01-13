@@ -43,7 +43,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="font-display text-lg md:text-2xl lg:text-3xl font-semibold text-foreground text-center mb-6 md:mb-10 px-2"
         >
-          Read What They Loved About SkinStation
+          Read What They Loved About Hilomè
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
