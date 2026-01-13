@@ -9,7 +9,7 @@ const services = [{
 }, {
   title: "Ice Bath",
   description: "Revolutionary laser treatment for skin rejuvenation and pigmentation correction.",
-  image: "https://i.imgur.com/1R7u1t3.png"
+  image: "https://i.imgur.com/HvvXaHz.png"
 }, {
   title: "Sauna",
   description: "Cutting-edge body contouring and skin tightening solutions.",
