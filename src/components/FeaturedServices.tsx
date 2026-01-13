@@ -59,13 +59,29 @@ const FeaturedServices = () => {
           scale: 1.02
         }}>
               <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 gradient-card-overlay opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
               
-              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-5 text-accent-foreground flex flex-col justify-end">
+              {/* Default gradient - bottom half */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsla(55,44%,15%,1)] via-[hsla(55,44%,15%,0.8)] via-25% to-transparent to-50% group-hover:opacity-0 transition-opacity duration-300" />
+              
+              {/* Hover gradient - full cover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsla(55,44%,15%,1)] via-[hsla(55,44%,15%,0.9)] to-[hsla(55,44%,15%,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              {/* Default text position - bottom */}
+              <div className="absolute bottom-0 left-0 right-0 p-3 md:p-5 text-accent-foreground group-hover:opacity-0 transition-opacity duration-300">
                 <h3 className="font-display text-base md:text-lg lg:text-xl font-semibold mb-1 leading-tight">
                   {service.title}
                 </h3>
                 <p className="text-accent-foreground/80 text-xs md:text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+              
+              {/* Hover text position - centered */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-3 md:p-5 text-accent-foreground text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="font-display text-base md:text-lg lg:text-xl font-semibold mb-2 leading-tight">
+                  {service.title}
+                </h3>
+                <p className="text-accent-foreground/90 text-xs md:text-sm leading-relaxed max-w-[90%]">
                   {service.description}
                 </p>
               </div>
