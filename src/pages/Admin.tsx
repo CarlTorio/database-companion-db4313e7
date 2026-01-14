@@ -345,6 +345,17 @@ const HilomeAdminDashboard = () => {
                     </Badge>
                   </div>
                   <div className="flex gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2"
+                      asChild
+                    >
+                      <a href={`tel:${app.phone.replace(/-/g, '')}`}>
+                        <Phone className="h-4 w-4" />
+                        Call
+                      </a>
+                    </Button>
                     <Button 
                       onClick={() => handleApproveApplication(app.id)}
                       className="gap-2 bg-green-600 hover:bg-green-700"
@@ -358,7 +369,7 @@ const HilomeAdminDashboard = () => {
                       className="gap-2"
                     >
                       <XCircle className="h-4 w-4" />
-                      Reject
+                      Canceled
                     </Button>
                   </div>
                 </div>
