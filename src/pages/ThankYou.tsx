@@ -179,16 +179,11 @@ const ThankYou = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
                 
                 {/* Content */}
-                <div className="relative h-full flex flex-col items-center justify-between p-8 text-center">
-                  {/* Header - positioned at top */}
-                  <div className="pt-2">
-                    {/* Logo/brand area - leave empty as it's in the background */}
-                  </div>
-
-                  {/* Booking Details - centered */}
-                  <div className="flex-1 flex flex-col items-center justify-center py-4 w-full">
+                <div className="relative h-full flex flex-col items-center justify-end p-8 text-center pb-12">
+                  {/* Booking Details - positioned lower */}
+                  <div className="flex flex-col items-center w-full">
                     {/* Booking Number */}
-                    <div className="mb-5 bg-white/80 backdrop-blur-sm rounded-lg px-6 py-3">
+                    <div className="mb-4 bg-white/80 backdrop-blur-sm rounded-lg px-6 py-3">
                       <p className="text-primary/70 text-[10px] tracking-widest uppercase mb-1 font-medium">
                         Booking Number
                       </p>
@@ -198,7 +193,7 @@ const ThankYou = () => {
                     </div>
 
                     {/* Guest Name */}
-                    <div className="mb-4">
+                    <div className="mb-3">
                       <p className="text-primary/60 text-[10px] tracking-widest uppercase mb-1">
                         Guest Name
                       </p>
@@ -208,7 +203,7 @@ const ThankYou = () => {
                     </div>
 
                     {/* Date & Time */}
-                    <div className="mb-4 bg-white/60 backdrop-blur-sm rounded-lg px-5 py-3">
+                    <div className="mb-3 bg-white/60 backdrop-blur-sm rounded-lg px-5 py-3">
                       <p className="text-primary/60 text-[10px] tracking-widest uppercase mb-1">
                         Appointment Schedule
                       </p>
@@ -224,18 +219,18 @@ const ThankYou = () => {
                     </div>
 
                     {/* Membership Badge */}
-                    <div className="mt-2">
+                    <div className="mb-3">
                       <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-xs font-medium tracking-wide">
                         {bookingDetails.membership}
                       </span>
                     </div>
-                  </div>
 
-                  {/* Footer */}
-                  <div className="pb-2">
-                    <p className="text-primary/50 text-[9px] tracking-wide">
-                      Please arrive 10 minutes before your appointment
-                    </p>
+                    {/* Footer */}
+                    <div className="mt-2">
+                      <p className="text-primary/50 text-[9px] tracking-wide">
+                        Please arrive 10 minutes before your appointment
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
