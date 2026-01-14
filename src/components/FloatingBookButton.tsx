@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const FloatingBookButton = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -38,11 +39,14 @@ const FloatingBookButton = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Button
+              asChild
               size="lg"
               className="gradient-accent text-accent-foreground shadow-elevated rounded-full px-6 py-6 flex items-center gap-2"
             >
-              <Calendar className="w-5 h-5" />
-              <span className="hidden sm:inline">Book Consultation</span>
+              <Link to="/book-consultation">
+                <Calendar className="w-5 h-5" />
+                <span className="hidden sm:inline">Book Consultation</span>
+              </Link>
             </Button>
           </motion.div>
         </motion.div>
