@@ -47,37 +47,22 @@ const BookConsultation = () => {
     if (formData.name && formData.email && formData.contactNumber && formData.preferredBranch && formData.date && formData.time) {
       setIsSubmitting(true);
       try {
-        const { error } = await supabase.from('bookings').insert({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.contactNumber,
-          membership: formData.preferredBranch,
-          date: formData.date,
-          time: formData.time,
-          message: formData.message || null,
-          status: 'pending'
+        // Navigate to thank you page with booking details
+        navigate("/thank-you", {
+          state: {
+            name: formData.name,
+            email: formData.email,
+            contactNumber: formData.contactNumber,
+            membership: formData.preferredBranch,
+            date: formData.date,
+            time: formData.time,
+            message: formData.message || undefined
+          }
         });
-
-        if (error) throw error;
-
-        setSubmitted(true);
         toast.success("Consultation booked successfully!");
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({
-            name: "",
-            email: "",
-            contactNumber: "",
-            preferredBranch: "",
-            date: "",
-            time: "",
-            message: ""
-          });
-        }, 3000);
       } catch (error) {
         console.error('Error booking consultation:', error);
         toast.error("Failed to book consultation. Please try again.");
-      } finally {
         setIsSubmitting(false);
       }
     } else {
